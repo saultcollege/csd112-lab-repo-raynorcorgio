@@ -38,16 +38,49 @@
         <main>
 
             <h1>Welcome to Raynor's Website!</h1>
+
+            <a href="images/me.jpg" 
+                target="_blank" 
+                rel="noopener noreferrer">
+
+                <!-- START: For development purposes 
+                Uncomment to see the image responsiveness using placeholder -->
+
+                <!-- <img 
+                    alt="my simple photo taken at Tochigi, Japan"
+                    src="https://via.placeholder.com/150"
+                    sizes="(max-width:500px) 150px,(min-width:500px) 300px"                
+                    srcset="https://via.placeholder.com/150 150w, 
+                            https://via.placeholder.com/300 300w"> -->
+
+                <!-- END: For development purposes -->
+
+                <img 
+                    alt="my simple photo taken at Tochigi, Japan"
+                    src="images/me.jpg"
+                    sizes="(max-width:500px) 150px,(min-width:500px) 300px"                
+                    srcset="images/me-150.png 150w, images/me-300.png 300w">
+
+            </a>
+            
             <p>An international student from Philippines</p>
+
             <p>
                An enthusiast of photography.
             </p>           
 
             <h2>My favorite things</h2>
-            
-            <a href="https://www.theverge.com/" target="_blank" rel="noopener noreferrer">
-                <img src="images/theverge.jpg" alt="the verge">
-            </a> 
+
+            <figure>
+                <a href="https://www.theverge.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/theverge.jpg" width="300" alt="the verge">
+                </a>
+                <figcaption>
+                    <strong>Figure 1.</strong>
+                    The Verge
+                </figcaption>
+            </figure>          
+           
 
             <h3>Travel Destination Wish List</h3>
             <ol>
@@ -70,6 +103,21 @@
                 </p>
             </blockquote>
 
+            <h3>Public Domain Audiobook</h3>
+
+            <audio controls>
+                <source 
+                    src="https://ia800706.us.archive.org/7/items/edison_his_life_0809_librivox/edison_lifeinventions_00_dyer_martin_64kb.mp3" 
+                    type="audio/mpeg">
+                <a href="https://ia800706.us.archive.org/7/items/edison_his_life_0809_librivox/edison_lifeinventions_00_dyer_martin_64kb.mp3" target="_blank" rel="noopener noreferrer">
+                    Download the audiobook
+                </a>
+            </audio>
+
+            <h3>YouTube Video</h3>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YZ5tOe7y9x4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
         </main>
 
         <footer>
@@ -91,6 +139,16 @@
                     Raynor Corgio
                 </a>
             </p>
+
+            <picture>
+                <source type="image/svg+xml" srcset="images/sc-logo/sc-logo.svg">
+                <img src="images/sc-logo/sc-logo.png" 
+                        width="70"
+                        alt="sault college logo" 
+                        srcset="images/sc-logo/sc-logo.png, 
+                                images/sc-logo/sc-logo.png 1.5x, 
+                                images/sc-logo/sc-logo.png 2x">
+            </picture>            
             
         </footer>
 
