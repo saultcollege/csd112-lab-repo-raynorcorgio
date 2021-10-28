@@ -1,0 +1,14 @@
+.width-wrap{
+    margin: auto;
+    width: 960px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-top: unset;
+    padding: 0 2em 2em 2em;
+}
+
+hr {
+   
+    width: 50vw;
+    min-width: 300px;
+    max-width: 890px;
+}
