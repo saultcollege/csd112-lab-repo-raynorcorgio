@@ -1,5 +1,14 @@
+html{
+    box-sizing: border-box;
+}
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
 body{
     background-color: #1a061a;
+    color: #1d011d;
 }
 
 ::selection{
@@ -8,10 +17,10 @@ body{
 }
 
 .width-wrap{
-    color: #1d011d;
+    /* color: #1d011d; */
     background-color: rgba(255, 255, 255, 0.8);
     margin: auto auto 3em auto;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     max-width: 960px;
     border: 1px solid rgba(0,0,0,0.3);
     border-top: unset;
@@ -27,8 +36,47 @@ h1,h2,h3 {
    color: rebeccapurple;
 }
 
+
+header{
+    
+    border-top: 4px solid rgba(0,0,0,0.1);
+    /* margin: 0 -2em; */
+    margin-left: -2em;
+    margin-right: -2em;
+    
+
+}
+
+nav {
+     margin-left: 2em;
+     margin-right: 2em;
+
+     padding-top: 1em;
+     
+     border-bottom: 1px dotted rgba(0,0,0,0.3);
+     
+     box-sizing: inherit;
+}
+    
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+   
+}
+
 nav ul li a {
     color: #1a061a;
+    padding-top: 1em;
+    
+}
+
+nav ul li a:hover {
+    border-top: 4px solid #b41717;
 }
 
 hr {
@@ -46,4 +94,28 @@ hr {
 
 dt::after {
     content: ':';
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead, tfoot, tbody tr th{
+    background-color: rgba(0,0,0,0.2);
+}
+  
+th, td {
+border: 1px solid black;
+padding:0.3em 1em;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.15);
+}
+
+
+/* Survey */
+
+p {
+    display: block;
 }
