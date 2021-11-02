@@ -1,26 +1,32 @@
 html{
     box-sizing: border-box;
 }
+
+*,
 *::after,
 *::before{
     box-sizing: inherit;
 }
 
 body{
-    background-color: #1a061a;
+    background: radial-gradient(41.71% 65% at 74.64% 61.11%, #181718 0%, #161516 54.69%, #0a0a0a 100%);
+    background-attachment: fixed;
+    /* background-color: #1a061a; */
     color: #1d011d;
 }
 
 ::selection{
     color: azure;
-    background: #b41717;
+    background: #4d1d1dc5;
+
+   
 }
 
 .width-wrap{
-    /* color: #1d011d; */
+    
     background-color: rgba(255, 255, 255, 0.8);
     margin: auto auto 3em auto;
-    /* box-sizing: border-box; */
+    
     max-width: 960px;
     border: 1px solid rgba(0,0,0,0.3);
     border-top: unset;
@@ -29,11 +35,19 @@ body{
 
 a {
     color: #b41717;
-    text-decoration: none;
+    /* text-decoration: none; */
+}
+
+a:hover {
+    color: #b41717d2;
 }
 
 h1,h2,h3 {
-   color: rebeccapurple;
+    /* background: -webkit-linear-gradient(red, purple); */
+    background: linear-gradient(to right, red, purple);
+    /* background:linear-gradient(to left, #743ad5, #d53a9d); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -52,6 +66,7 @@ nav {
      margin-right: 2em;
 
      padding-top: 1em;
+     padding-bottom: 0.5em;
      
      border-bottom: 1px dotted rgba(0,0,0,0.3);
      
@@ -72,12 +87,16 @@ nav ul li {
 nav ul li a {
     color: #1a061a;
     padding-top: 1em;
+    margin: 0 1em;
     
 }
 
 nav ul li a:hover {
     border-top: 4px solid #b41717;
+    color: #f00f0fd8;
 }
+
+/* Footer */
 
 hr {
    
@@ -96,8 +115,11 @@ dt::after {
     content: ':';
 }
 
+/* Table */
+
 table {
     border-collapse: collapse;
+    /* width: 100%; */
 }
 
 thead, tfoot, tbody tr th{
@@ -105,7 +127,7 @@ thead, tfoot, tbody tr th{
 }
   
 th, td {
-border: 1px solid black;
+border: 1px solid #fff;
 padding:0.3em 1em;
 }
 
@@ -116,6 +138,22 @@ tbody tr:nth-child(even) {
 
 /* Survey */
 
-p {
+p > label {
     display: block;
+}
+
+input:invalid {
+    background-color: #b417177a;
+}
+
+[type="submit"] {
+    border: none;
+    padding: 1em 3em;
+    background-color: #b41717;
+    cursor: pointer;
+    color: antiquewhite;
+}
+
+[type="submit"]:hover {
+    background-color: #941414;
 }
