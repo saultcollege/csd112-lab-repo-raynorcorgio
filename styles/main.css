@@ -9,6 +9,7 @@ html{
 }
 
 body{
+    font-family: 'Overpass', sans-serif;
     background: radial-gradient(41.71% 65% at 74.64% 61.11%, #181718 0%, #161516 54.69%, #0a0a0a 100%);
     background-attachment: fixed;
     /* background-color: #1a061a; */
