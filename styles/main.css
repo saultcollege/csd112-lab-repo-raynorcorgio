@@ -65,9 +65,6 @@ header{
 nav {
      margin-left: 2em;
      margin-right: 2em;
-
-     padding-top: 1em;
-     padding-bottom: 0.5em;
      
      border-bottom: 1px dotted rgba(0,0,0,0.3);
      
@@ -88,8 +85,10 @@ nav ul li {
 nav ul li a {
     color: #1a061a;
     padding-top: 1em;
-    margin: 0 1em;
-    
+    padding-bottom: 0.5em;
+    margin: -4px 1em 0 1em;
+    display: inline-block;
+    border-top: 4px solid transparent;
 }
 
 nav ul li a:hover {
@@ -123,7 +122,7 @@ table {
     /* width: 100%; */
 }
 
-thead, tfoot, tbody tr th{
+thead td, tfoot td, th{
     background-color: rgba(0,0,0,0.2);
 }
   
@@ -132,7 +131,7 @@ border: 1px solid #fff;
 padding:0.3em 1em;
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even) td {
     background-color: rgba(0,0,0,0.15);
 }
 
