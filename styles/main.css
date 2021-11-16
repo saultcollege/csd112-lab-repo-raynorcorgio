@@ -42,12 +42,21 @@ img {
      max-width: 100%;
 }
 
-h1,h2,h3 {
-    /* background: -webkit-linear-gradient(red, purple); */
-    background: linear-gradient(to right, red, purple);
-    /* background:linear-gradient(to left, #743ad5, #d53a9d); */
+h1 {
+    background:linear-gradient(to left, #2d1755, #d53a9d);
+    background:-webkit-linear-gradient(to left, #2d1755, #d53a9d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2,h3 {
+    background: -webkit-linear-gradient(red, purple);
+    background: linear-gradient(to right, red, purple);
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 iframe {
@@ -175,7 +184,7 @@ thead td, tfoot td, th{
 }
   
 th, td {
-border: 1px solid #fff;
+/* border: 1px solid #fff; */
 padding:0.3em 1em;
 }
 
