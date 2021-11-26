@@ -84,15 +84,14 @@ nav {
 }
     
 nav ul {
+    display: flex;
+    justify-content: center;
+    
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-   
-}
 
 nav ul li a {
     color: #1a061a;
@@ -113,6 +112,18 @@ nav ul li a:hover {
     color: #f00f0fd8;
     text-decoration: none;
 }
+
+/* .favourites label {
+    background: #eee; 
+    border: 1px solid #ddd; 
+    padding: .7em 1em;
+    cursor: pointer;
+    z-index: 1;
+    margin-left: -1px;
+  }
+.favourites label:first-of-type {
+    margin-left: 0;
+} */
 
 
 .width-wrap{
@@ -140,6 +151,103 @@ nav ul li a:hover {
     box-shadow:5px 5px #1a061a50 ;
 }
 
+.bio a {
+    display: block;
+    position: relative;
+}
+
+.paperclip {
+    background-color: unset !important;
+    box-shadow: none !important;
+    width: 20%;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+.favourites{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    background-color:#ffffff9c;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.favourites label {
+    
+    z-index: 1;
+    order: -1;
+    padding: 1px 1em;
+}
+
+.favourites label h3 {
+    cursor: pointer;
+}
+
+input ~ div {
+    width: 100%;
+    margin-top: -1px;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.596);
+    -webkit-order: 1;
+    order: 1;
+}
+
+input[type=radio], input ~ div {
+    display: none;
+}
+
+input[type=radio]:checked + label {
+    /* background: #fff; */
+    border-bottom: 3px solid #b41717d2;
+    color: #941414;
+}
+
+input[type=radio]:checked + label + div {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Gallery */
+
+div.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+div.gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.gallery a {
+    transition: all .2s ease-in-out;
+}
+
+div.gallery a:hover {    
+    /* scale: 1.1;     */
+    transform: scale(1.1);
+}
+
+div.gallery .col-span-2 {
+    grid-column: span 2;
+}
+  
+div.gallery .row-span-2 {
+grid-row: span 2;
+}
+
+
+
 /* Footer */
 
 footer {
@@ -161,8 +269,20 @@ hr {
 }
 
 a.back-top {
+
+    bottom: 10px;
+    display: inline-block;
+    position: sticky;
+    margin-left: -25px;
+
     text-shadow: 2px 2px #1a061a40;
     text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+
+a.back-top:hover {
+    transform: rotate(45deg);
 }
 
 dt::after {

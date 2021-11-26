@@ -40,6 +40,7 @@
                     <li><a href="glossary.html">Glossary</a></li>
                     <li><a href="survey.html">Survey</a></li>
                     <li><a href="lorem.html">Lorem</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </nav>
 
@@ -47,7 +48,7 @@
 
         <main>
 
-            <h1>Welcome to Raynor's Website!</h1>
+        <h1>Welcome to Raynor's Website!</h1>
 
         <div class="bio">
             <a href="images/me.jpg" target="_blank" rel="noopener noreferrer">
@@ -66,6 +67,8 @@
 
                 <img alt="my simple photo taken at Tochigi, Japan" src="images/me-150.png"
                     sizes="(max-width:500px) 150px, 300px" srcset="images/me-150.png 150w, images/me-300.png 300w">
+                
+                <img src="images/paperclip.png" alt="paperclip image" class="paperclip">
 
             </a>
 
@@ -164,56 +167,92 @@
 
             <h2>My favorite things</h2>
 
-            <figure>
-                <a href="https://www.theverge.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="images/theverge.jpg" width="300" alt="the verge">
-                </a>
-                <figcaption>
-                    <strong>Figure 1.</strong>
-                    The Verge
-                </figcaption>
-            </figure>
+            <div class="favourites">
+                
+                <input type="radio" name="grpTab" id="tab1" checked="checked">
 
+                <label for="tab1">
+                    <h3>Interest</h3>
+                </label>
 
-            <h3>Travel Destination Wish List</h3>
-            <ol>
-                <li>Switzerland</li>
-                <li>Norway</li>
-                <li>Iceland</li>
-            </ol>
+                <div>
+                    <figure>
+                        <a href="https://www.theverge.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/theverge.jpg" width="300" alt="the verge">
+                        </a>
+                        <figcaption>
+                            <strong>Figure 1.</strong>
+                            The Verge
+                        </figcaption>
+                    </figure>
+                </div>
+    
+                <input type="radio" name="grpTab" id="tab2">
 
-            <h3>Haiku</h3>
+                <label for="tab2">
+                    <h3>Travel Destination Wish List</h3>
+                </label>
 
-            <blockquote cite="https://www.familyfriendpoems.com/poem/together-haiku">
-                <p>
-                    You and me alone <br />
-                    Madness of world locked away <br />
-                    Peace and quiet reigns <br />
+               <div>
+                    <ol>
+                        <li>Switzerland</li>
+                        <li>Norway</li>
+                        <li>Iceland</li>
+                    </ol>
+               </div>
+    
+                <input type="radio" name="grpTab" id="tab3">
 
-                    <cite>
-                        <span class="author">by Paul Homes</span>
-                    </cite>
-                </p>
-            </blockquote>
+                <label for="tab3">
+                    <h3>Haiku</h3>
+                </label>
+    
+                <div>
+                    <blockquote cite="https://www.familyfriendpoems.com/poem/together-haiku">
+                        <p>
+                            You and me alone <br />
+                            Madness of world locked away <br />
+                            Peace and quiet reigns <br />
+                    
+                            <cite>
+                                <span class="author">by Paul Homes</span>
+                            </cite>
+                        </p>
+                    </blockquote>
+                </div>
+    
+                <input type="radio" name="grpTab" id="tab4">
 
-            <h3>Public Domain Audiobook</h3>
+                <label for="tab4">
+                    <h3>Public Domain Audiobook</h3>
+                </label>
+    
+                <div>
+                    <audio controls>
+                        <source
+                            src="https://ia800706.us.archive.org/7/items/edison_his_life_0809_librivox/edison_lifeinventions_00_dyer_martin_64kb.mp3"
+                            type="audio/mpeg">
+                        <a href="https://ia800706.us.archive.org/7/items/edison_his_life_0809_librivox/edison_lifeinventions_00_dyer_martin_64kb.mp3"
+                            target="_blank" rel="noopener noreferrer">
+                            Download the audiobook
+                        </a>
+                    </audio>
+                </div>
+                
+                <input type="radio" name="grpTab" id="tab5">
 
-            <audio controls>
-                <source
-                    src="https://ia800706.us.archive.org/7/items/edison_his_life_0809_librivox/edison_lifeinventions_00_dyer_martin_64kb.mp3"
-                    type="audio/mpeg">
-                <a href="https://ia800706.us.archive.org/7/items/edison_his_life_0809_librivox/edison_lifeinventions_00_dyer_martin_64kb.mp3"
-                    target="_blank" rel="noopener noreferrer">
-                    Download the audiobook
-                </a>
-            </audio>
+                <label for="tab5">
+                    <h3>YouTube Video</h3>
+                </label>
 
-            <h3>YouTube Video</h3>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YZ5tOe7y9x4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YZ5tOe7y9x4"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+            </div>           
 
         </main>
 
