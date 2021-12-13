@@ -74,6 +74,11 @@ header{
 
 }
 
+#menu-toggle {
+    display: none;
+}
+
+
 nav {
      margin-left: 2em;
      margin-right: 2em;
@@ -113,18 +118,6 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-/* .favourites label {
-    background: #eee; 
-    border: 1px solid #ddd; 
-    padding: .7em 1em;
-    cursor: pointer;
-    z-index: 1;
-    margin-left: -1px;
-  }
-.favourites label:first-of-type {
-    margin-left: 0;
-} */
-
 
 .width-wrap{
     
@@ -141,7 +134,7 @@ nav ul li a:hover {
 /* Index */
 
 .bio {
-    column-count: 3;
+    column-width: 13em;
     column-gap: 2em;
 }
 
@@ -152,7 +145,7 @@ nav ul li a:hover {
 }
 
 .bio a {
-    display: block;
+    display: inline-block;
     position: relative;
 }
 
@@ -217,7 +210,8 @@ input[type=radio]:checked + label + div {
 
 div.gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     row-gap: 10px;
     column-gap: 10px;
 }
@@ -245,7 +239,6 @@ div.gallery .col-span-2 {
 div.gallery .row-span-2 {
 grid-row: span 2;
 }
-
 
 
 /* Footer */
@@ -312,6 +305,12 @@ tbody tr:nth-child(even) td {
     background-color: rgba(0,0,0,0.15);
 }
 
+tbody tr:nth-child(odd) td {
+    background-color: rgba(151, 151, 151, 0.15);
+}
+
+
+
 
 /* Survey */
 
@@ -339,3 +338,138 @@ input:invalid {
 [type="submit"]:hover {
     background-color: #941414;
 }
+
+
+
+/* ***MEDIA QUERIES*** */
+
+/* Navigation */
+@media screen and (max-width: 700px) {
+    nav ul {
+
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.15s ease-out;
+        padding: 1em unset;
+    }
+
+    nav ul li:first-child{
+        padding-top: 5px;
+    }
+   
+
+    /* Mobile Menu */
+
+    label.sandwich-icon {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 25px;
+        border-top: solid 5px #f00f0fd8;
+        
+        margin: 1em auto;
+        cursor: pointer;
+        
+        transition: border-top 200ms;
+      }
+    
+      label.sandwich-icon::after {
+        content: "";
+        display: block;
+        width: 40px;
+        border-top: 5px solid #f00f0fd8;
+        position: absolute;
+        top: 15px;
+        transition: transform 200ms;
+      }
+      label.sandwich-icon::before {
+        content: "";
+        display: block;
+        width: 40px;
+        border-top: 5px solid #f00f0fd8;
+        position: absolute;
+        top: 5px;
+        transition: transform 200ms;
+      }
+    
+      nav input[id="menu-toggle"]:checked + label::before {
+        display: block;
+        transform: rotate(-45deg) translate(-4px, 5px);
+      }
+      nav input[id="menu-toggle"]:checked + label::after {
+        display: block;
+        transform: rotate(45deg) translate(-2px, -3px);
+      }
+      nav input[id="menu-toggle"]:checked + label + ul {
+        height: 280px;
+        transition: height 0.25s ease-in;
+      }
+      nav input[id="menu-toggle"]:checked + label {
+        transition: border-top 400ms;
+        border-top: transparent;
+      }
+}
+
+
+/* index */
+
+@media screen and (max-width: 500px) {
+    thead td,
+    tfoot td,
+    th {
+      display: none;
+    }
+    td {
+      display: block;
+      padding: 0 1rem;
+    }
+  
+    table {
+      caption-side: top;
+    }
+    tr td:first-child {
+      padding-top: 0.3em;
+      font-weight: bold;
+    }
+    tr td:last-child {
+      padding-bottom: 0.3em;
+      font-style: italic;
+      font-size: 0.8em;
+    }
+  
+    tr td:last-child::after {
+      content: "hrs/wk";
+    }
+}
+
+@media screen and (max-width: 800px) {
+    div.favourites {
+        flex-direction: column;
+    }
+    div.favourites label {
+        order: 0;
+        text-align: center;
+        padding: 0;
+    }
+    input:checked + label + div {
+        margin: 0;
+        border-radius: 10px;
+    }
+    div.favourites input:checked + label {
+        margin: 0;        
+    }
+}
+
+/* Gallery */
+
+@media screen and (max-width: 450px) {
+    div.gallery .col-span-2 {
+      grid-column: span 1;
+    }
+}
+
+
+
+

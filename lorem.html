@@ -50,6 +50,18 @@
             clear: both;
         }
 
+        @media screen and (max-width: 450px) {
+            div img.fright {
+            float: none;
+            display: block;
+            }
+
+            div img.fleft {
+            float: none;
+            display: block;
+            }
+        }
+
     </style>
 
 </head>
@@ -61,6 +73,10 @@
         <header id="top">
 
             <nav>
+
+                <input type="checkbox" id="menu-toggle" name="menu" />
+                <label class="sandwich-icon" for="menu-toggle"></label>
+                
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="links.html">Links</a></li>
